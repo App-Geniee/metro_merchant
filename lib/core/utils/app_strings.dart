@@ -1,4 +1,4 @@
-class MyStrings {
+class AppStrings {
 
   static const String appName = "Metro Merchant";
 
