@@ -6,6 +6,7 @@ import 'package:metro_merchant/core/utils/app_strings.dart';
 import 'package:metro_merchant/core/utils/dimensions.dart';
 import 'package:metro_merchant/views/screens/auth/forgetpassword/phone.dart';
 import 'package:metro_merchant/views/screens/auth/sign_up/sign_up_screen.dart';
+import 'package:metro_merchant/views/screens/home/home_screen.dart';
 
 import '../../../prefs/prefs.dart';
 
@@ -146,7 +147,9 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
             ),
           SizedBox(height: 30,),
-          CustomButton(context, "Login with phone", () {}, AppColors.secondaryColor900),
+          CustomButton(context, "Login with phone", () {
+            Get.offAll(()=>HomeScreen());
+          }, AppColors.secondaryColor900),
             SizedBox(height: 20,),
             Padding(
               padding: const EdgeInsets.fromLTRB(19,0,0,20),
