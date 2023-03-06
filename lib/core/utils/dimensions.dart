@@ -29,6 +29,9 @@ class Dimensions{
   static const double space25 = 25;
   static const double space30 = 30;
 
+  /// radius
+  static const double defaultRadius = 4;
+
   /// screen padding
   static const EdgeInsets screenDefaultHv = EdgeInsets.symmetric(vertical: space20, horizontal: space15);
 

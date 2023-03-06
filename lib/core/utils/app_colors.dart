@@ -46,4 +46,6 @@ class AppColors{
   static const Color colorBlue = Color(0xff246DDC);
   static const Color colorBlueAccent = Color(0xff5783C5);
   static const Color colorLightBlue = Color(0xffD7E7FF);
+
+  static const Color screenBgColor = Color(0xffC9C9C9);
 }
