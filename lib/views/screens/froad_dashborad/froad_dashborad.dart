@@ -56,7 +56,7 @@ class _FroadDashBoradState extends State<FroadDashBorad> {
             ],
           ),
           Divider(
-            color: Colors.amber,
+            color: AppColors.colorBlack300,
           ),
           SizedBox(height: 10,),
 
