@@ -26,6 +26,7 @@ class Dimensions{
   static const double space12 = 12;
   static const double space15 = 15;
   static const double space20 = 20;
+  static const double space24 = 24;
   static const double space25 = 25;
   static const double space30 = 30;
 
@@ -33,9 +34,12 @@ class Dimensions{
   static const double defaultRadius = 4;
 
   /// screen padding
-  static const EdgeInsets screenDefaultHv = EdgeInsets.symmetric(vertical: space20, horizontal: space15);
+  static const EdgeInsets screenDefaultHV = EdgeInsets.symmetric(vertical: space20, horizontal: space15);
 
   /// text to text
   static const SizedBox textToTextVerticalSpace = SizedBox(height: space8);
   static const SizedBox textToTextHorizontalSpace = SizedBox(width: space10);
+
+  /// bottom nav
+  static const double bottomNavMenuShapeRadius = 8;
 }

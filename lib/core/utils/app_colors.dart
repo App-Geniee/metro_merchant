@@ -47,5 +47,14 @@ class AppColors{
   static const Color colorBlueAccent = Color(0xff5783C5);
   static const Color colorLightBlue = Color(0xffD7E7FF);
 
-  static const Color screenBgColor = Color(0xffC9C9C9);
+  static const Color screenBgColor = Color(0xffFFFFFF);
+
+  static const Color bottomNavShadowColor = Color(0xffD9E0E9);
+  static const Color transparentColor = Colors.transparent;
+
+
+  static const Color bottomNavSelectedColor = Color(0xff2B4361);
+  static const Color bottomNavUnSelectedColor = Color(0xffB2BAC3);
+
+
 }
