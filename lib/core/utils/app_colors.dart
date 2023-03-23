@@ -56,5 +56,6 @@ class AppColors{
   static const Color bottomNavSelectedColor = Color(0xff2B4361);
   static const Color bottomNavUnSelectedColor = Color(0xffB2BAC3);
 
-
+  static const Color fieldDisableBorderColor = primaryColor300;
+  static const Color fieldEnableBorderColor = primaryColor;
 }

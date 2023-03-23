@@ -69,6 +69,7 @@ flutter:
     - assets/icons/
     - assets/icons/bottom_nav/
     - assets/icons/drawer/
+    - assets/icons/parcel/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

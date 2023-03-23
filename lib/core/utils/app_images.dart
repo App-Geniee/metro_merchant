@@ -33,4 +33,8 @@ class AppImages{
   static const String orderReturnImage = "assets/images/home/order_return.png";
   static const String totalReturnedImage = "assets/images/home/total_returned.png";
   static const String deliveryImage = "assets/images/home/on_process.png";
+
+  /// create parcel
+  static const String alertIcon = "assets/icons/parcel/alert.png";
+  static const String takaIcon = "assets/icons/parcel/taka.png";
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:metro_merchant/core/route/route.dart';
 import 'package:metro_merchant/core/utils/app_colors.dart';
 import 'package:metro_merchant/core/utils/app_images.dart';
 import 'package:metro_merchant/core/utils/dimensions.dart';
@@ -42,14 +44,17 @@ class _HomeScreenState extends State<HomeScreen> {
           titleSpacing: 0,
           title: Image.asset(AppImages.appBarTitleImage, height: 25),
           actions: [
-            Container(
-              margin: const EdgeInsets.only(bottom: Dimensions.space12, top: Dimensions.space12, right: Dimensions.space20),
-              padding: const EdgeInsetsDirectional.symmetric(vertical: Dimensions.space8, horizontal: Dimensions.space15),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: AppColors.secondaryColor900, borderRadius: BorderRadius.circular(Dimensions.defaultRadius * 1.5)
+            GestureDetector(
+              onTap: () => Get.toNamed(AppRoute.createParcelScreen),
+              child: Container(
+                margin: const EdgeInsets.only(bottom: Dimensions.space12, top: Dimensions.space12, right: Dimensions.space20),
+                padding: const EdgeInsetsDirectional.symmetric(vertical: Dimensions.space8, horizontal: Dimensions.space15),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                    color: AppColors.secondaryColor900, borderRadius: BorderRadius.circular(Dimensions.defaultRadius * 1.5)
+                ),
+                child: Text("Create Parcel", style: boldSmall.copyWith(color: AppColors.colorWhite)),
               ),
-              child: Text("Create Parcel", style: boldSmall.copyWith(color: AppColors.colorWhite)),
             ),
             GestureDetector(
               onTap: (){},
