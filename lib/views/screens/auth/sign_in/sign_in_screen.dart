@@ -99,11 +99,11 @@ class _SignInScreenState extends State<SignInScreen> {
                       horizontalPadding: Dimensions.space15,
                       text: "Login with phone",
                       icon: Icons.arrow_forward,
-                      press: () => Get.toNamed(AppRoute.otpScreen)
+                      press: () => Get.toNamed(AppRoute.homeScreen)
                     ),
                     const SizedBox(height: Dimensions.space24),
                     GestureDetector(
-                      onTap: (){},
+                      onTap: () => Get.toNamed(AppRoute.signUpScreen),
                       child: Text("Or create account", style: boldDefault.copyWith(color: AppColors.colorBlack)),
                     ),
                   ],
