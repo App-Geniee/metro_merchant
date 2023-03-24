@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:metro_merchant/core/route/route.dart';
 import 'package:metro_merchant/core/utils/app_colors.dart';
 import 'package:metro_merchant/core/utils/app_images.dart';
 import 'package:metro_merchant/core/utils/dimensions.dart';
@@ -47,20 +49,31 @@ class OrderHistoryCard extends StatelessWidget {
                 itemBuilder: (context){
                   return [
                     PopupMenuItem(
-                      child: Text("View", style: semiBoldDefault.copyWith(color: AppColors.colorBlack300)),
-                      onTap: (){},
+                      child: GestureDetector(
+                        onTap: (){},
+                        child: Text("View", style: semiBoldDefault.copyWith(color: AppColors.colorBlack300)),
+                      ),
                     ),
                     PopupMenuItem(
-                      child: Text("Edit", style: semiBoldDefault.copyWith(color: AppColors.colorBlack300)),
-                      onTap: (){},
+                      child: GestureDetector(
+                        onTap: () => Get.toNamed(AppRoute.editParcelScreen),
+                        child: Text(
+                            "Edit",
+                            style: semiBoldDefault.copyWith(color: AppColors.colorBlack300)
+                        ),
+                      ),
                     ),
                     PopupMenuItem(
-                      child: Text("Delete", style: semiBoldDefault.copyWith(color: AppColors.colorBlack300)),
-                      onTap: (){},
+                      child: GestureDetector(
+                        onTap: (){},
+                        child:  Text("Delete", style: semiBoldDefault.copyWith(color: AppColors.colorBlack300))
+                      ),
                     ),
                     PopupMenuItem(
-                      child: Text("Ticket", style: semiBoldDefault.copyWith(color: AppColors.colorBlack300)),
-                      onTap: (){},
+                      child: GestureDetector(
+                        onTap: (){},
+                        child: Text("Ticket", style: semiBoldDefault.copyWith(color: AppColors.colorBlack300)),
+                      )
                     )
                   ];
                 },

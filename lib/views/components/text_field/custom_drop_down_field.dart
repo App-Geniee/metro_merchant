@@ -46,7 +46,7 @@ class _CustomDropDownTextFieldState extends State<CustomDropDownTextField> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         widget.needLabel ? LabelText(text: widget.labelText.toString()) : const SizedBox(),
-        widget.needLabel ? const SizedBox(height: Dimensions.space8) : const SizedBox(),
+        widget.needLabel ? const SizedBox(height: Dimensions.space3) : const SizedBox(),
         SizedBox(
           height: 50,
           child: DropdownButtonFormField(
