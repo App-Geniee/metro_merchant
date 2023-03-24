@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:metro_merchant/core/route/route.dart';
 import 'package:metro_merchant/core/utils/app_colors.dart';
 import 'package:metro_merchant/core/utils/dimensions.dart';
 import 'package:metro_merchant/core/utils/font_styles.dart';
@@ -88,7 +89,9 @@ class _CreateNewShopScreenState extends State<CreateNewShopScreen> {
 
               CustomButton(
                 text: "Create Shop",
-                press: (){},
+                press: (){
+                  Get.toNamed(AppRoute.deactivateShopScreen);
+                },
               )
             ],
           ),
