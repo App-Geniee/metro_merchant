@@ -10,6 +10,8 @@ class CustomButtonWithIcon extends StatelessWidget {
   final Color bgColor;
   final Color contentColor;
   final VoidCallback press;
+  final double verticalPadding;
+  final double horizontalPadding;
 
   const CustomButtonWithIcon({
     Key? key,
@@ -17,7 +19,9 @@ class CustomButtonWithIcon extends StatelessWidget {
     required this.icon,
     this.bgColor = AppColors.secondaryColor900,
     this.contentColor = AppColors.colorWhite,
-    required this.press
+    required this.press,
+    this.verticalPadding = Dimensions.space12,
+    this.horizontalPadding = Dimensions.space15
   }) : super(key: key);
 
   @override
@@ -26,7 +30,7 @@ class CustomButtonWithIcon extends StatelessWidget {
       onTap: press,
       child: Container(
         width: MediaQuery.of(context).size.width,
-        padding: const EdgeInsetsDirectional.symmetric(vertical: Dimensions.space12, horizontal: Dimensions.space15),
+        padding: EdgeInsetsDirectional.symmetric(vertical: verticalPadding, horizontal: horizontalPadding),
         alignment: Alignment.center,
         decoration: BoxDecoration(color: bgColor, borderRadius: BorderRadius.circular(Dimensions.defaultRadius * 2)),
         child: Row(
