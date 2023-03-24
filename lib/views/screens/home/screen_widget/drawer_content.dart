@@ -43,7 +43,7 @@ class DrawerContent extends StatelessWidget {
               DrawerMenuItem(
                   imageSrc: AppImages.drawerHomeImage,
                   itemName: "Home",
-                  press: (){}
+                  press: () => Get.offAndToNamed(AppRoute.homeScreen)
               ),
               DrawerMenuItem(
                   imageSrc: AppImages.drawerShopImage,

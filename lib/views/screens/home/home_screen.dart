@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
             onTap: (){
               drawerKey.currentState!.openDrawer();
             },
-            child: const Icon(Icons.menu, color: AppColors.primaryColor, size: 18),
+            child: const Icon(Icons.menu, color: AppColors.primaryColor, size: 20),
           ),
           titleSpacing: 0,
           title: Image.asset(AppImages.appBarTitleImage, height: 25),

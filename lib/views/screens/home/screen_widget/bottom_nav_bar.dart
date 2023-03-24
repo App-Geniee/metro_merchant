@@ -58,7 +58,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     }
     else if (index == 1) {
       if (!(selectedIndex == 1)) {
-
+        Get.toNamed(AppRoute.orderHistoryScreen);
       }
     }
     else if (index == 2) {
@@ -68,7 +68,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     }
     else if (index == 3) {
       if (!(selectedIndex == 3)) {
-        Get.toNamed(AppRoute.orderHistoryScreen);
+
       }
     }
     else if (index == 4) {
