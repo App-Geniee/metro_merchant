@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:metro_merchant/core/route/route.dart';
 import 'package:metro_merchant/core/utils/app_colors.dart';
-import 'package:metro_merchant/core/utils/app_images.dart';
 import 'package:metro_merchant/core/utils/dimensions.dart';
 import 'package:metro_merchant/core/utils/font_styles.dart';
 import 'package:metro_merchant/views/components/button/custom_button_with_icon.dart';
@@ -39,7 +39,9 @@ class _AllShopScreenState extends State<AllShopScreen> {
               CustomButtonWithIcon(
                 text: "Add New Shop",
                 icon: Icons.add_circle_outline,
-                press: (){}
+                press: (){
+                  Get.toNamed(AppRoute.createNewShopScreen);
+                }
               )
             ],
           ),

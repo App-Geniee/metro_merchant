@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:metro_merchant/core/utils/app_colors.dart';
 import 'package:metro_merchant/core/utils/dimensions.dart';
 import 'package:metro_merchant/core/utils/font_styles.dart';
-import 'package:metro_merchant/views/components/divider/vertical_widget_divider.dart';
 import 'package:metro_merchant/views/screens/order/order_history/screen_widget/order_history_card.dart';
 
 class OrderHistoryScreen extends StatefulWidget {
