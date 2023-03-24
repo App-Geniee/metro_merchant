@@ -35,7 +35,14 @@ class HomeDeliveryDateSection extends StatelessWidget {
                 ),
                 const SizedBox(width: Dimensions.space12),
                 GestureDetector(
-                  onTap: (){},
+                  onTap: () async{
+                    DateTime? pickedDate = await showDatePicker(
+                        context: context,
+                        initialDate: DateTime.now(),
+                        firstDate: DateTime(1950),
+                        lastDate: DateTime(2100)
+                    );
+                  },
                   child: Image.asset(AppImages.selectDateImage, color: AppColors.secondaryColor900, height: 20, width: 20),
                 )
               ],

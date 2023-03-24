@@ -6,6 +6,7 @@ import 'package:metro_merchant/core/utils/app_images.dart';
 import 'package:metro_merchant/core/utils/dimensions.dart';
 import 'package:metro_merchant/core/utils/font_styles.dart';
 import 'package:metro_merchant/views/components/bottom_nav/bottom_nav_menu_shape.dart';
+import 'package:metro_merchant/views/screens/home/screen_widget/bottom_nav_bar.dart';
 import 'package:metro_merchant/views/screens/home/screen_widget/drawer_content.dart';
 import 'package:metro_merchant/views/screens/home/screen_widget/home_banner_section.dart';
 import 'package:metro_merchant/views/screens/home/screen_widget/home_category_section.dart';
@@ -22,8 +23,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
 
-  int selectedIndex = 0;
-  List imageList = [AppImages.homeIcon, AppImages.orderIcon, AppImages.addIcon, AppImages.historyIcon, AppImages.profileIcon];
   final drawerKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -87,36 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
-        bottomNavigationBar: SingleChildScrollView(
-          physics: const ClampingScrollPhysics(),
-          child: Container(
-            width: MediaQuery.of(context).size.width,
-            padding: const EdgeInsetsDirectional.symmetric(horizontal: Dimensions.space24, vertical: Dimensions.space12),
-            decoration: const BoxDecoration(
-              color: AppColors.colorWhite,
-              boxShadow: [
-                BoxShadow(color: AppColors.bottomNavShadowColor, blurRadius: 2, offset: Offset(-2, -2))
-              ]
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: List.generate(imageList.length, (index) => BottomNavMenuShape(
-                 shapeColor: index == selectedIndex ? AppColors.primaryColor200 : index == 2 ? AppColors.secondaryColor900 : AppColors.transparentColor,
-                 press: (){
-                   setState(() {
-                     selectedIndex = index;
-                   });
-                 },
-                 isSelected: index == selectedIndex ? index == 2 ? false : true : false,
-                 image: Image.asset(
-                    imageList[index],
-                    color: index == selectedIndex ? AppColors.bottomNavSelectedColor : index == 2 ? AppColors.colorWhite : AppColors.bottomNavUnSelectedColor,
-                    height: 16, width: 16
-                  )
-              ))
-            ),
-          ),
-        ),
+        bottomNavigationBar: const BottomNavBar(),
       ),
     );
   }

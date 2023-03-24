@@ -58,4 +58,10 @@ class AppColors{
 
   static const Color fieldDisableBorderColor = primaryColor300;
   static const Color fieldEnableBorderColor = primaryColor;
+
+  static const Color statusColor1 = Color(0xffDEFDFF);
+  static const Color statusColor2 = Color(0xffDEEDFF);
+
+  static const Color statusTextColor1 = Color(0xff00BBC7);
+  static const Color statusTextColor2 = Color(0xff5E7A9D);
 }

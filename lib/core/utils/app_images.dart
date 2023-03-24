@@ -37,4 +37,10 @@ class AppImages{
   /// create parcel
   static const String alertIcon = "assets/icons/parcel/alert.png";
   static const String takaIcon = "assets/icons/parcel/taka.png";
+
+  /// order history
+  static const String dotMenuIcon = "assets/icons/order/dot_menu.png";
+  static const String phoneIcon = "assets/icons/order/phone.png";
+  static const String shopIcon = "assets/icons/order/shop.png";
+  static const String addressIcon = "assets/icons/order/location.png";
 }
