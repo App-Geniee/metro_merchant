@@ -6,7 +6,6 @@ import 'package:metro_merchant/core/utils/app_images.dart';
 import 'package:metro_merchant/core/utils/app_strings.dart';
 import 'package:metro_merchant/core/utils/dimensions.dart';
 import 'package:metro_merchant/core/utils/font_styles.dart';
-import 'package:metro_merchant/views/components/app_bar/custom_app_bar.dart';
 import 'package:metro_merchant/views/components/button/custom_button_with_icon.dart';
 import 'package:metro_merchant/views/components/text_field/custom_text_field.dart';
 
@@ -100,7 +99,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       horizontalPadding: Dimensions.space15,
                       text: "Login with phone",
                       icon: Icons.arrow_forward,
-                      press: (){}
+                      press: () => Get.toNamed(AppRoute.otpScreen)
                     ),
                     const SizedBox(height: Dimensions.space24),
                     GestureDetector(

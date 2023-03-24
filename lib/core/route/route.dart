@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
+import 'package:metro_merchant/views/screens/auth/otp/otp_screen.dart';
 import 'package:metro_merchant/views/screens/auth/sign_in/sign_in_screen.dart';
+import 'package:metro_merchant/views/screens/auth/sign_up/sign_up_screen.dart';
 import 'package:metro_merchant/views/screens/create_parcel/create_parcel_screen.dart';
 import 'package:metro_merchant/views/screens/credit/credit_transaction_history_screen.dart';
 import 'package:metro_merchant/views/screens/home/home_screen.dart';
@@ -14,6 +16,9 @@ class AppRoute {
   static const String splashScreen = "/splash_screen";
 
   static const String signInScreen = "/sign_in_screen";
+  static const String signUpScreen = "/sign_up_screen";
+
+  static const String otpScreen = "/otp_screen";
 
   static const String homeScreen = "/home_screen";
   static const String creditTransactionHistoryScreen = "/credit_transaction_history_screen";
@@ -29,6 +34,9 @@ class AppRoute {
   static List<GetPage> route = [
     GetPage(name: splashScreen, page: () => const SplashScreen()),
     GetPage(name: signInScreen, page: () => const SignInScreen()),
+    GetPage(name: signUpScreen, page: () => const SignUpScreen()),
+
+    GetPage(name: otpScreen, page: () => const OtpScreen()),
 
     GetPage(name: homeScreen, page: () => const HomeScreen()),
     GetPage(name: creditTransactionHistoryScreen, page: () => const CreditTransactionHistoryScreen()),
