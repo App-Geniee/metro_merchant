@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:metro_merchant/core/route/route.dart';
 import 'package:metro_merchant/core/utils/app_colors.dart';
 import 'package:metro_merchant/core/utils/app_images.dart';
 import 'package:metro_merchant/core/utils/dimensions.dart';
@@ -140,7 +141,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         ),
                         CircleIconButton(
                           icon: Icons.arrow_forward,
-                          press: (){},
+                          press: () => Get.toNamed(AppRoute.homeScreen),
                         )
                       ],
                     )

@@ -166,7 +166,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       horizontalPadding: Dimensions.space15,
                       text: "Create account",
                       icon: Icons.arrow_forward,
-                      press: () => Get.toNamed(AppRoute.otpScreen)
+                      press: () => Get.toNamed(AppRoute.phoneNumberVerifyScreen)
                     )
                   ],
                 ),
