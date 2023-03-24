@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:metro_merchant/core/route/route.dart';
 import 'package:metro_merchant/core/utils/app_colors.dart';
 import 'package:metro_merchant/core/utils/app_images.dart';
 import 'package:metro_merchant/core/utils/dimensions.dart';
@@ -47,7 +48,7 @@ class DrawerContent extends StatelessWidget {
               DrawerMenuItem(
                   imageSrc: AppImages.drawerShopImage,
                   itemName: "Shop",
-                  press: (){}
+                  press: () => Get.toNamed(AppRoute.allShopScreen)
               ),
               DrawerMenuItem(
                   imageSrc: AppImages.drawerPaymentDetailsImage,
