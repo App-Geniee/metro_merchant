@@ -36,23 +36,28 @@ class _CreateParcelScreenState extends State<CreateParcelScreen> {
           padding: const EdgeInsetsDirectional.symmetric(vertical: Dimensions.space15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const CreateParcelTopSection(),
-              const SizedBox(height: Dimensions.space20),
-              const CreateParcelCustomerInfoSection(),
-              const SizedBox(height: Dimensions.space20),
-              const CreateParcelDeliveryInfoSection(),
-              const SizedBox(height: Dimensions.space20),
-              const CreateParcelBottomSection(),
-              const SizedBox(height: Dimensions.space20),
-              Padding(
-                padding: const EdgeInsetsDirectional.symmetric(horizontal: Dimensions.space15),
-                child: CustomButton(
-                  text: "Create Order",
-                  press: (){},
-                ),
-              )
+            children: const [
+              CreateParcelTopSection(),
+              SizedBox(height: Dimensions.space20),
+              CreateParcelCustomerInfoSection(),
+              SizedBox(height: Dimensions.space20),
+              CreateParcelDeliveryInfoSection(),
+              SizedBox(height: Dimensions.space20),
+              CreateParcelBottomSection(),
             ],
+          ),
+        ),
+        bottomNavigationBar: SingleChildScrollView(
+          physics: const ClampingScrollPhysics(),
+          child: Container(
+            alignment: Alignment.center,
+            width: MediaQuery.of(context).size.width,
+            padding: const EdgeInsetsDirectional.symmetric(vertical: Dimensions.space12, horizontal: Dimensions.space15),
+            color: AppColors.colorWhite,
+            child: CustomButton(
+              text: "Create Order",
+              press: (){},
+            ),
           ),
         ),
       ),

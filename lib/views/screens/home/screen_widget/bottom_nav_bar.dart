@@ -63,7 +63,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     }
     else if (index == 2) {
       if (!(selectedIndex == 2)) {
-
+        Get.toNamed(AppRoute.createParcelScreen);
       }
     }
     else if (index == 3) {

@@ -82,7 +82,7 @@ class DrawerContent extends StatelessWidget {
         Align(
           alignment: FractionalOffset.bottomCenter,
           child: DrawerButton(
-            press: (){}
+            press: () => Get.offAllNamed(AppRoute.signInScreen)
           ),
         )
       ],
