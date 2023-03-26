@@ -104,28 +104,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                     const SizedBox(height: Dimensions.space20),
 
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: const EdgeInsets.only(bottom: Dimensions.space15, top: Dimensions.space10),
-                      decoration: const BoxDecoration(
-                        color: AppColors.transparentColor,
-                        border: Border(
-                          bottom: BorderSide(color: AppColors.fieldDisableBorderColor)
-                        )
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Product Category",
-                            style: semiBoldDefault.copyWith(color: AppColors.colorBlack400, fontWeight: FontWeight.w600),
-                          ),
-                          GestureDetector(
-                            onTap: (){},
-                            child: const Icon(Icons.keyboard_arrow_down, color: AppColors.colorBlack400, size: 15),
-                          )
-                        ],
-                      ),
+                    CustomTextField(
+                      labelText: "Product Category",
+                      readOnly: true,
+                      controller: TextEditingController(),
+                      onChanged: (value){},
+                      isShowSuffixIcon: true,
+                      isPicker: true,
+                      isIcon: true,
+                      onSuffixTap: () => Get.toNamed(AppRoute.selectCategoryScreen),
                     ),
                     const SizedBox(height: Dimensions.space20),
 
@@ -136,28 +123,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                     const SizedBox(height: Dimensions.space20),
 
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: const EdgeInsets.only(bottom: Dimensions.space15, top: Dimensions.space10),
-                      decoration: const BoxDecoration(
-                          color: AppColors.transparentColor,
-                          border: Border(
-                              bottom: BorderSide(color: AppColors.fieldDisableBorderColor)
-                          )
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Select Area",
-                            style: semiBoldDefault.copyWith(color: AppColors.colorBlack400, fontWeight: FontWeight.w600),
-                          ),
-                          GestureDetector(
-                            onTap: (){},
-                            child: const Icon(Icons.keyboard_arrow_down, color: AppColors.colorBlack400, size: 15),
-                          )
-                        ],
-                      ),
+                    CustomTextField(
+                      labelText: "Select Area",
+                      readOnly: true,
+                      controller: TextEditingController(),
+                      onChanged: (value){},
+                      isShowSuffixIcon: true,
+                      isPicker: true,
+                      isIcon: true,
+                      onSuffixTap: (){},
                     ),
                     const SizedBox(height: Dimensions.space25),
 

@@ -21,13 +21,14 @@ class CustomTextField extends StatefulWidget {
   final bool isIcon;
   final VoidCallback? onSuffixTap;
   final bool isSearch;
-  final bool isCountryPicker;
+  final bool isPicker;
   final TextInputAction inputAction;
   final bool needOutlineBorder;
   final bool readOnly;
   final bool needRequiredSign;
   final int maxLines;
   final bool animatedLabel;
+  final bool needLabel;
   final Color fillColor;
 
   const CustomTextField({
@@ -48,12 +49,13 @@ class CustomTextField extends StatefulWidget {
     this.isIcon = false,
     this.onSuffixTap,
     this.isSearch = false,
-    this.isCountryPicker = false,
+    this.isPicker = false,
     this.inputAction = TextInputAction.next,
     this.needOutlineBorder = false,
     this.needRequiredSign = false,
     this.maxLines = 1,
-    this.animatedLabel = false
+    this.animatedLabel = false,
+    this.needLabel = false,
   }) : super(key: key);
 
   @override
@@ -99,9 +101,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
             ? IconButton(
           onPressed: widget.onSuffixTap,
           icon:  Icon(
-            widget.isSearch ? Icons.search_outlined : widget.isCountryPicker ? Icons.arrow_drop_down_outlined:Icons.camera_alt_outlined,
-            size: 25,
-            color: AppColors.primaryColor,
+            widget.isSearch ? Icons.search_outlined : widget.isPicker ? Icons.keyboard_arrow_down:Icons.camera_alt_outlined,
+            size: 20,
+            color: widget.isPicker ? AppColors.colorBlack400 : AppColors.primaryColor,
           ),
         )
             : null
@@ -112,8 +114,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
     ) : Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        LabelText(text: widget.labelText.toString()),
-        const SizedBox(height: Dimensions.space8),
+        widget.needLabel ? LabelText(text: widget.labelText.toString()) : const SizedBox(),
+        widget.needLabel ? const SizedBox(height: Dimensions.space8) : const SizedBox(),
         TextFormField(
           maxLines: widget.maxLines,
           readOnly: widget.readOnly,
@@ -130,7 +132,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           obscureText: widget.isPassword?obscureText:false,
           decoration: InputDecoration(
             contentPadding: const EdgeInsets.only(top: 5, left: 15, right: 15, bottom: 5),
-            hintText: widget.hintText!=null?widget.hintText!.tr:'',
+            hintText: widget.hintText,
             hintStyle: regularSmall.copyWith(color: AppColors.colorBlack.withOpacity(0.7)),
             fillColor: AppColors.transparentColor,
             filled: true,
@@ -146,9 +148,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 ? IconButton(
               onPressed: widget.onSuffixTap,
               icon:  Icon(
-                widget.isSearch ? Icons.search_outlined : widget.isCountryPicker ? Icons.arrow_drop_down_outlined:Icons.camera_alt_outlined,
-                size: 25,
-                color: AppColors.primaryColor,
+                widget.isSearch ? Icons.search_outlined : widget.isPicker ? Icons.keyboard_arrow_down:Icons.camera_alt_outlined,
+                size: 20,
+                color: widget.isPicker ? AppColors.colorBlack400 : AppColors.primaryColor,
               ),
             )
                 : null
@@ -176,6 +178,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
         contentPadding: const EdgeInsets.only(top: 5, left: 0, right: 0, bottom: 5),
         labelText:  widget.labelText?.tr,
         labelStyle: semiBoldDefault.copyWith(color: AppColors.colorBlack400, fontWeight: FontWeight.w600),
+        hintText: widget.hintText,
+        hintStyle: regularSmall.copyWith(color: AppColors.colorBlack.withOpacity(0.7)),
         fillColor: AppColors.transparentColor,
         filled: true,
         border: const UnderlineInputBorder(borderSide: BorderSide(width:0.5,color: AppColors.fieldDisableBorderColor)),
@@ -190,9 +194,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
             ? IconButton(
           onPressed: widget.onSuffixTap,
           icon:  Icon(
-            widget.isSearch ? Icons.search_outlined : widget.isCountryPicker ? Icons.arrow_drop_down_outlined:Icons.camera_alt_outlined,
-            size: 25,
-            color: AppColors.primaryColor,
+            widget.isSearch ? Icons.search_outlined : widget.isPicker ? Icons.keyboard_arrow_down:Icons.camera_alt_outlined,
+            size: 20,
+            color: widget.isPicker ? AppColors.colorBlack400 : AppColors.primaryColor,
           ),
         )
             : null
