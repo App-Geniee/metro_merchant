@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:metro_merchant/core/route/route.dart';
 import 'package:metro_merchant/core/utils/app_colors.dart';
 import 'package:metro_merchant/core/utils/dimensions.dart';
 import 'package:metro_merchant/core/utils/font_styles.dart';
@@ -99,7 +100,7 @@ class _SelectAreaScreenState extends State<SelectAreaScreen> {
                       Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: List.generate(data[index].area!.length, (areaIndex) => GestureDetector(
-                            onTap: (){},
+                            onTap: () => Get.toNamed(AppRoute.selectSpecificAreaScreen),
                             child: Container(
                               width: MediaQuery.of(context).size.width,
                               padding: const EdgeInsetsDirectional.symmetric(vertical: Dimensions.space15, horizontal: Dimensions.space15),

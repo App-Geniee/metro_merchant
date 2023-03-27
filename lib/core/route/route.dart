@@ -4,6 +4,7 @@ import 'package:metro_merchant/views/screens/auth/phone_number_verify/phone_numb
 import 'package:metro_merchant/views/screens/auth/sign_in/sign_in_screen.dart';
 import 'package:metro_merchant/views/screens/auth/sign_up/inner_screens/select_area_screen.dart';
 import 'package:metro_merchant/views/screens/auth/sign_up/inner_screens/select_category_screen.dart';
+import 'package:metro_merchant/views/screens/auth/sign_up/inner_screens/select_specific_area.dart';
 import 'package:metro_merchant/views/screens/auth/sign_up/sign_up_screen.dart';
 import 'package:metro_merchant/views/screens/create_parcel/create_parcel_screen.dart';
 import 'package:metro_merchant/views/screens/credit/credit_transaction_history_screen.dart';
@@ -22,6 +23,7 @@ class AppRoute {
   static const String signUpScreen = "/sign_up_screen";
   static const String selectCategoryScreen = "/select_category_screen";
   static const String selectAreaScreen = "/select_area_screen";
+  static const String selectSpecificAreaScreen = "/select_specific_area_screen";
 
   static const String phoneNumberVerifyScreen = "/phone_number_verify_screen";
 
@@ -42,8 +44,10 @@ class AppRoute {
     GetPage(name: splashScreen, page: () => const SplashScreen()),
     GetPage(name: signInScreen, page: () => const SignInScreen()),
     GetPage(name: signUpScreen, page: () => const SignUpScreen()),
+
     GetPage(name: selectCategoryScreen, page: () => const SelectCategoryScreen()),
     GetPage(name: selectAreaScreen, page: () => const SelectAreaScreen()),
+    GetPage(name: selectSpecificAreaScreen, page: () => const SelectSpecificAreaScreen()),
 
     GetPage(name: phoneNumberVerifyScreen, page: () => const PhoneNumberVerifyScreen()),
 
