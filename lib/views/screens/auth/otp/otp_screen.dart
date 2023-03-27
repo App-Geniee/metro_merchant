@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:metro_merchant/core/route/route.dart';
 import 'package:metro_merchant/core/utils/app_colors.dart';
 import 'package:metro_merchant/core/utils/app_images.dart';
 import 'package:metro_merchant/core/utils/dimensions.dart';
@@ -10,7 +9,9 @@ import 'package:metro_merchant/views/screens/auth/otp/screen_widget/otp_timer.da
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 class OtpScreen extends StatefulWidget {
-  const OtpScreen({Key? key}) : super(key: key);
+
+  final String nextRoute;
+  const OtpScreen({Key? key, required this.nextRoute}) : super(key: key);
 
   @override
   State<OtpScreen> createState() => _OtpScreenState();
@@ -141,7 +142,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         ),
                         CircleIconButton(
                           icon: Icons.arrow_forward,
-                          press: () => Get.toNamed(AppRoute.signUpScreen),
+                          press: () => Get.toNamed(widget.nextRoute),
                         )
                       ],
                     )

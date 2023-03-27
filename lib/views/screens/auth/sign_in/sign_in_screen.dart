@@ -90,7 +90,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                     const SizedBox(height: Dimensions.space20),
                     GestureDetector(
-                      onTap: (){},
+                      onTap: () => Get.toNamed(AppRoute.forgetPasswordScreen),
                       child: Text("Forgot password?", style: boldSmall.copyWith(color: AppColors.colorBlack)),
                     ),
                     const SizedBox(height: Dimensions.space25 * 2.5),

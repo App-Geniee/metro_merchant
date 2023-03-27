@@ -114,7 +114,7 @@ class _PhoneNumberVerifyScreenState extends State<PhoneNumberVerifyScreen> {
                        horizontalPadding: Dimensions.space15,
                        text: "Get verification code", 
                        icon: Icons.arrow_forward, 
-                       press: () => Get.toNamed(AppRoute.otpScreen)
+                       press: () => Get.toNamed(AppRoute.otpScreen, arguments: [AppRoute.signUpScreen.toString()])
                     )
                   ],
                 ),

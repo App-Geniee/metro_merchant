@@ -1,7 +1,9 @@
 import 'package:get/get.dart';
 import 'package:metro_merchant/views/screens/add_payment_method/add_payment_method_screen.dart';
+import 'package:metro_merchant/views/screens/auth/forget_password/forget_password_screen.dart';
 import 'package:metro_merchant/views/screens/auth/otp/otp_screen.dart';
 import 'package:metro_merchant/views/screens/auth/phone_number_verify/phone_number_verify_screen.dart';
+import 'package:metro_merchant/views/screens/auth/reset_password/reset_password_screen.dart';
 import 'package:metro_merchant/views/screens/auth/sign_in/sign_in_screen.dart';
 import 'package:metro_merchant/views/screens/auth/sign_up/inner_screens/password_screen.dart';
 import 'package:metro_merchant/views/screens/auth/sign_up/inner_screens/select_area_screen.dart';
@@ -28,6 +30,9 @@ class AppRoute {
   static const String selectAreaScreen = "/select_area_screen";
   static const String selectSpecificAreaScreen = "/select_specific_area_screen";
 
+  static const String forgetPasswordScreen = "/forget_password_screen";
+  static const String resetPasswordScreen = "/reset_password_screen";
+
   static const String phoneNumberVerifyScreen = "/phone_number_verify_screen";
   static const String passwordScreen = "/password_screen";
   static const String signedUpSuccessScreen = "/signed_up_success_screen";
@@ -52,6 +57,9 @@ class AppRoute {
     GetPage(name: signInScreen, page: () => const SignInScreen()),
     GetPage(name: signUpScreen, page: () => const SignUpScreen()),
 
+    GetPage(name: forgetPasswordScreen, page: () => const ForgetPasswordScreen()),
+    GetPage(name: resetPasswordScreen, page: () => const ResetPasswordScreen()),
+
     GetPage(name: selectCategoryScreen, page: () => const SelectCategoryScreen()),
     GetPage(name: selectAreaScreen, page: () => const SelectAreaScreen()),
     GetPage(name: selectSpecificAreaScreen, page: () => const SelectSpecificAreaScreen()),
@@ -62,7 +70,7 @@ class AppRoute {
 
     GetPage(name: addPaymentMethodScreen, page: () => const AddPaymentMethodScreen()),
 
-    GetPage(name: otpScreen, page: () => const OtpScreen()),
+    GetPage(name: otpScreen, page: () => OtpScreen(nextRoute: Get.arguments[0])),
 
     GetPage(name: homeScreen, page: () => const HomeScreen()),
     GetPage(name: creditTransactionHistoryScreen, page: () => const CreditTransactionHistoryScreen()),
