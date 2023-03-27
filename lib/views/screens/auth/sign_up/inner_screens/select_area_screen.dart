@@ -98,31 +98,34 @@ class _SelectAreaScreenState extends State<SelectAreaScreen> {
                       ),
                       Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: List.generate(data[index].area!.length, (areaIndex) => Container(
-                            width: MediaQuery.of(context).size.width,
-                            padding: const EdgeInsetsDirectional.symmetric(vertical: Dimensions.space15, horizontal: Dimensions.space15),
-                            decoration: const BoxDecoration(
-                                color: AppColors.transparentColor,
-                                border: Border(
-                                    bottom: BorderSide(
-                                        color: AppColors.colorBlack100,
-                                        width: 1
-                                    )
-                                )
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  data[index].area![areaIndex] ?? "",
-                                  style: semiBoldDefault.copyWith(color: AppColors.colorBlack400, fontWeight: FontWeight.w600),
-                                ),
-                                const Icon(
-                                    Icons.arrow_forward_ios,
-                                    color: AppColors.secondaryColor900,
-                                    size: 16
-                                )
-                              ],
+                          children: List.generate(data[index].area!.length, (areaIndex) => GestureDetector(
+                            onTap: (){},
+                            child: Container(
+                              width: MediaQuery.of(context).size.width,
+                              padding: const EdgeInsetsDirectional.symmetric(vertical: Dimensions.space15, horizontal: Dimensions.space15),
+                              decoration: const BoxDecoration(
+                                  color: AppColors.transparentColor,
+                                  border: Border(
+                                      bottom: BorderSide(
+                                          color: AppColors.colorBlack100,
+                                          width: 1
+                                      )
+                                  )
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    data[index].area![areaIndex] ?? "",
+                                    style: semiBoldDefault.copyWith(color: AppColors.colorBlack400, fontWeight: FontWeight.w600),
+                                  ),
+                                  const Icon(
+                                      Icons.arrow_forward_ios,
+                                      color: AppColors.secondaryColor900,
+                                      size: 16
+                                  )
+                                ],
+                              ),
                             ),
                           ))
                       )
