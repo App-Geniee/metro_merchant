@@ -9,13 +9,15 @@ class CustomButton extends StatelessWidget {
   final VoidCallback press;
   final Color bgColor;
   final Color textColor;
+  final bool isOutlineBorder;
 
   const CustomButton({
     Key? key,
     required this.text,
     required this.press,
     this.bgColor = AppColors.secondaryColor900,
-    this.textColor = AppColors.colorWhite
+    this.textColor = AppColors.colorWhite,
+    this.isOutlineBorder = false
   }) : super(key: key);
 
   @override
@@ -26,7 +28,15 @@ class CustomButton extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         padding: const EdgeInsetsDirectional.symmetric(vertical: Dimensions.space10),
         alignment: Alignment.center,
-        decoration: BoxDecoration(color: bgColor, borderRadius: BorderRadius.circular(Dimensions.defaultRadius * 1.5)),
+        decoration: isOutlineBorder ? BoxDecoration(
+          color: AppColors.colorWhite,
+          border: Border.all(color: AppColors.secondaryColor900, width: 1),
+          borderRadius: BorderRadius.circular(Dimensions.defaultRadius * 1.5)
+        ) : BoxDecoration(
+          color: bgColor,
+          borderRadius: BorderRadius.circular(Dimensions.defaultRadius * 1.5),
+          border: Border.all(color: AppColors.secondaryColor900, width: 1),
+        ),
         child: Text(
           text,
           textAlign: TextAlign.center,
