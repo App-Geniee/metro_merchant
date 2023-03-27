@@ -43,4 +43,7 @@ class AppImages{
   static const String phoneIcon = "assets/icons/order/phone.png";
   static const String shopIcon = "assets/icons/order/shop.png";
   static const String addressIcon = "assets/icons/order/location.png";
+
+  /// sign up
+  static const String successImage = "assets/icons/sign_up/success.png";
 }

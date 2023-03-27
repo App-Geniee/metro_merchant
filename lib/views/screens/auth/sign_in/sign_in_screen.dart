@@ -103,7 +103,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                     const SizedBox(height: Dimensions.space24),
                     GestureDetector(
-                      onTap: () => Get.toNamed(AppRoute.signUpScreen),
+                      onTap: () => Get.toNamed(AppRoute.phoneNumberVerifyScreen),
                       child: Text("Or create account", style: boldDefault.copyWith(color: AppColors.colorBlack)),
                     ),
                   ],

@@ -8,14 +8,14 @@ import 'package:metro_merchant/core/utils/font_styles.dart';
 import 'package:metro_merchant/views/components/button/custom_button_with_icon.dart';
 import 'package:metro_merchant/views/components/text_field/custom_text_field.dart';
 
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+class PasswordScreen extends StatefulWidget {
+  const PasswordScreen({Key? key}) : super(key: key);
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<PasswordScreen> createState() => _PasswordScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _PasswordScreenState extends State<PasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -23,6 +23,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         backgroundColor: AppColors.screenBgColor,
         body: SingleChildScrollView(
           child: Stack(
+            clipBehavior: Clip.none,
             children: [
               Container(height: MediaQuery.of(context).size.height),
               Positioned(
@@ -63,87 +64,40 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
               Positioned(
-                top: 230,
+                top: 300,
                 left: Dimensions.space15, right: Dimensions.space15,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    CustomTextField(
-                      labelText: "Owner name",
-                      controller: TextEditingController(),
-                      onChanged: (value){},
+                    Text(
+                      "Don't worry!",
+                      style: boldOverLarge.copyWith(color: AppColors.colorBlack),
                     ),
-                    const SizedBox(height: Dimensions.space20),
-
+                    const SizedBox(height: Dimensions.space30),
                     CustomTextField(
-                      labelText: "Shop name",
-                      controller: TextEditingController(),
-                      onChanged: (value){},
-                    ),
-                    const SizedBox(height: Dimensions.space20),
-
-                    CustomTextField(
-                      labelText: "Email",
-                      controller: TextEditingController(),
-                      onChanged: (value){},
-                    ),
-                    const SizedBox(height: Dimensions.space20),
-
-                    CustomTextField(
-                      labelText: "Page link/website link",
-                      controller: TextEditingController(),
-                      onChanged: (value){},
-                    ),
-                    const SizedBox(height: Dimensions.space20),
-
-                    CustomTextField(
-                      labelText: "Enter phone number",
-                      controller: TextEditingController(),
-                      onChanged: (value){},
-                    ),
-                    const SizedBox(height: Dimensions.space20),
-
-                    CustomTextField(
-                      labelText: "Product Category",
-                      readOnly: true,
-                      controller: TextEditingController(),
-                      onChanged: (value){},
+                      isPassword: true,
                       isShowSuffixIcon: true,
-                      isPicker: true,
-                      isIcon: true,
-                      onSuffixTap: () => Get.toNamed(AppRoute.selectCategoryScreen),
-                    ),
-                    const SizedBox(height: Dimensions.space20),
-
-                    CustomTextField(
-                      labelText: "Pickup address",
+                      labelText: "Password",
                       controller: TextEditingController(),
                       onChanged: (value){},
                     ),
                     const SizedBox(height: Dimensions.space20),
-
                     CustomTextField(
-                      labelText: "Select Area",
-                      readOnly: true,
-                      controller: TextEditingController(),
-                      onChanged: (value){},
+                      isPassword: true,
                       isShowSuffixIcon: true,
-                      isPicker: true,
-                      isIcon: true,
-                      onSuffixTap: () => Get.toNamed(AppRoute.selectAreaScreen),
+                      labelText: "Confirm password",
+                      controller: TextEditingController(),
+                      onChanged: (value){},
                     ),
-                    const SizedBox(height: Dimensions.space25),
-
+                    const SizedBox(height: Dimensions.space30 * 2.5),
                     CustomButtonWithIcon(
-                      verticalPadding: Dimensions.space15,
-                      horizontalPadding: Dimensions.space15,
-                      text: "Create account",
+                      text: "Continue",
                       icon: Icons.arrow_forward,
-                      press: () => Get.toNamed(AppRoute.passwordScreen)
-                    )
+                      press: () => Get.toNamed(AppRoute.signedUpSuccessScreen)
+                    ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

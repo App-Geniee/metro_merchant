@@ -141,7 +141,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         ),
                         CircleIconButton(
                           icon: Icons.arrow_forward,
-                          press: () => Get.toNamed(AppRoute.homeScreen),
+                          press: () => Get.toNamed(AppRoute.signUpScreen),
                         )
                       ],
                     )
