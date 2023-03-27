@@ -131,7 +131,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       isShowSuffixIcon: true,
                       isPicker: true,
                       isIcon: true,
-                      onSuffixTap: (){},
+                      onSuffixTap: () => Get.toNamed(AppRoute.selectAreaScreen),
                     ),
                     const SizedBox(height: Dimensions.space25),
 
