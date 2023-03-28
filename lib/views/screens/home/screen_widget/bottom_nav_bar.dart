@@ -68,7 +68,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     }
     else if (index == 3) {
       if (!(selectedIndex == 3)) {
-
+        Get.toNamed(AppRoute.paymentUpdateScreen);
       }
     }
     else if (index == 4) {

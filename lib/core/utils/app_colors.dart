@@ -42,6 +42,8 @@ class AppColors{
   static const Color colorLightGreen = Color(0xff28C700);
   static const Color colorLightGreen100 = Color(0xffE6FFDF);
 
+  static const Color colorDeepOrange = colorWarning2;
+
   static const Color colorWarning1 = Color(0xff712F00);
   static const Color colorWarning2 = Color(0xffF96800);
   static const Color colorWarning3 = Color(0xffCF9062);

@@ -7,12 +7,14 @@ class StatusWidget extends StatelessWidget {
   final Color bgColor;
   final String text;
   final Color textColor;
+  final double borderRadius;
 
   const StatusWidget({
     Key? key,
     required this.bgColor,
     required this.text,
-    required this.textColor
+    required this.textColor,
+    this.borderRadius = Dimensions.defaultRadius
   }) : super(key: key);
 
   @override
@@ -22,7 +24,7 @@ class StatusWidget extends StatelessWidget {
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: bgColor,
-        borderRadius: BorderRadius.circular(Dimensions.defaultRadius)
+        borderRadius: BorderRadius.circular(borderRadius)
       ),
       child: Text(text, style: boldExtraSmall.copyWith(color: textColor)),
     );

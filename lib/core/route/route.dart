@@ -17,6 +17,7 @@ import 'package:metro_merchant/views/screens/home/home_screen.dart';
 import 'package:metro_merchant/views/screens/order/edit/edit_parcel_screen.dart';
 import 'package:metro_merchant/views/screens/order/order_history/order_history_screen.dart';
 import 'package:metro_merchant/views/screens/order/view/view_order_details_screen.dart';
+import 'package:metro_merchant/views/screens/payment_update/payment_update_screen.dart';
 import 'package:metro_merchant/views/screens/shop/all_shop/all_shop_screen.dart';
 import 'package:metro_merchant/views/screens/shop/create_new_shop/create_new_shop_screen.dart';
 import 'package:metro_merchant/views/screens/shop/deactive_shop/deactive_shop_screen.dart';
@@ -50,6 +51,8 @@ class AppRoute {
   static const String editParcelScreen = "/edit_parcel_screen";
   static const String viewOrderDetailsScreen = "/view_order_details_screen";
 
+  static const String paymentUpdateScreen = "/payment_update_screen";
+
   static const String allShopScreen = "/all_shop_screen";
   static const String createNewShopScreen = "/create_new_shop_screen";
   static const String deactivateShopScreen = "/deactivate_shop_screen";
@@ -81,6 +84,8 @@ class AppRoute {
     GetPage(name: orderHistoryScreen, page: () => const OrderHistoryScreen()),
     GetPage(name: editParcelScreen, page: () => const EditParcelScreen()),
     GetPage(name: viewOrderDetailsScreen, page: () => const ViewOrderDetailsScreen()),
+
+    GetPage(name: paymentUpdateScreen, page: () => const PaymentUpdateScreen()),
 
     GetPage(name: allShopScreen, page: () => const AllShopScreen()),
     GetPage(name: createNewShopScreen, page: () => const CreateNewShopScreen()),
