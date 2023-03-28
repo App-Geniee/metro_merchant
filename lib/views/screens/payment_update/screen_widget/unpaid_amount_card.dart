@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:metro_merchant/core/route/route.dart';
 import 'package:metro_merchant/core/utils/app_colors.dart';
 import 'package:metro_merchant/core/utils/app_images.dart';
 import 'package:metro_merchant/core/utils/dimensions.dart';
@@ -57,7 +59,7 @@ class UnpaidAmountCard extends StatelessWidget {
                   borderRadius: Dimensions.defaultRadius * 3,
                 ),
                 GestureDetector(
-                  onTap: (){},
+                  onTap: () => Get.toNamed(AppRoute.paymentDetailsScreen, arguments: ["Unpaid", AppColors.colorDeepOrange]),
                   child: Text(
                     "View invoice",
                     style: boldDefault.copyWith(color: AppColors.secondaryColor900),
