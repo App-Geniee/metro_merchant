@@ -16,7 +16,7 @@ class OrderHistoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      padding: const EdgeInsets.all(Dimensions.space15),
+      padding: const EdgeInsets.all(Dimensions.space12),
       decoration: BoxDecoration(
         color: AppColors.transparentColor,
         border: Border.all(color: AppColors.colorBlack100, width: 1),
@@ -45,12 +45,17 @@ class OrderHistoryCard extends StatelessWidget {
               ),
               PopupMenuButton(
                 offset: const Offset(-15, -15),
-                child: Image.asset(AppImages.dotMenuIcon, color: AppColors.colorBlack, height: 16, width: 5),
+                child: Container(
+                  padding: const EdgeInsets.all(Dimensions.space3),
+                  alignment: Alignment.center,
+                  decoration: const BoxDecoration(color: AppColors.transparentColor, shape: BoxShape.circle),
+                  child: Image.asset(AppImages.dotMenuIcon, color: AppColors.colorBlack, height: 14, width: 5),
+                ),
                 itemBuilder: (context){
                   return [
                     PopupMenuItem(
                       child: GestureDetector(
-                        onTap: (){},
+                        onTap: () => Get.toNamed(AppRoute.viewOrderDetailsScreen),
                         child: Text("View", style: semiBoldDefault.copyWith(color: AppColors.colorBlack300)),
                       ),
                     ),
@@ -160,36 +165,39 @@ class OrderHistoryCard extends StatelessWidget {
           ),
           const VerticalWidgetDivider(space: Dimensions.space12, dividerColor: AppColors.colorBlack100),
           const SizedBox(height: Dimensions.space8),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
+          Flexible(
+            flex: 0,
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("COD", style: boldSmall.copyWith(color: AppColors.colorGreen)),
-                  const SizedBox(width: 4),
-                  Image.asset(AppImages.takaIcon, color: AppColors.colorBlack, height: 15, width: 15),
-                  Text("20.00", style: boldSmall.copyWith(color: AppColors.colorBlack100)),
-                ],
-              ),
-              const HorizontalWidgetDivider(),
-              Row(
-                children: [
-                  Text("Charge", style: boldSmall.copyWith(color: AppColors.colorBlack100)),
-                  const SizedBox(width: 4),
-                  Image.asset(AppImages.takaIcon, color: AppColors.colorBlack, height: 15, width: 15),
-                  Text("80.00", style: boldSmall.copyWith(color: AppColors.colorBlack100)),
-                ],
-              ),
-              const HorizontalWidgetDivider(),
-              Row(
-                children: [
-                  Text("Discount", style: boldSmall.copyWith(color: AppColors.colorBlack100)),
-                  const SizedBox(width: 4),
-                  Image.asset(AppImages.takaIcon, color: AppColors.colorBlack, height: 15, width: 15),
-                  Text("80.00", style: boldSmall.copyWith(color: AppColors.colorBlack100)),
-                ],
-              )
-            ]
+                  Row(
+                    children: [
+                      Text("COD", style: boldSmall.copyWith(color: AppColors.colorGreen)),
+                      const SizedBox(width: 2),
+                      Image.asset(AppImages.takaIcon, color: AppColors.colorBlack, height: 15, width: 14),
+                      Text("20.00", style: boldSmall.copyWith(color: AppColors.colorBlack100)),
+                    ],
+                  ),
+                  const HorizontalWidgetDivider(space: 4),
+                  Row(
+                    children: [
+                      Text("Charge", style: boldSmall.copyWith(color: AppColors.colorBlack100)),
+                      const SizedBox(width: 2),
+                      Image.asset(AppImages.takaIcon, color: AppColors.colorBlack, height: 15, width: 14),
+                      Text("180.00", style: boldSmall.copyWith(color: AppColors.colorBlack100)),
+                    ],
+                  ),
+                  const HorizontalWidgetDivider(space: 4),
+                  Row(
+                    children: [
+                      Text("Discount", style: boldSmall.copyWith(color: AppColors.colorBlack100)),
+                      const SizedBox(width: 2),
+                      Image.asset(AppImages.takaIcon, color: AppColors.colorBlack, height: 15, width: 14),
+                      Text("180.00", style: boldSmall.copyWith(color: AppColors.colorBlack100)),
+                    ],
+                  )
+                ]
+            ),
           )
         ],
       ),

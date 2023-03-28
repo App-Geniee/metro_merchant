@@ -22,6 +22,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       child: Scaffold(
         backgroundColor: AppColors.screenBgColor,
         body: SingleChildScrollView(
+          padding: const EdgeInsets.only(bottom: Dimensions.space20),
           child: Stack(
             children: [
               Container(height: MediaQuery.of(context).size.height),
@@ -132,19 +133,25 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       isIcon: true,
                       onSuffixTap: () => Get.toNamed(AppRoute.selectAreaScreen),
                     ),
-                    const SizedBox(height: Dimensions.space25),
-
-                    CustomButtonWithIcon(
-                      verticalPadding: Dimensions.space15,
-                      horizontalPadding: Dimensions.space15,
-                      text: "Create account",
-                      icon: Icons.arrow_forward,
-                      press: () => Get.toNamed(AppRoute.passwordScreen)
-                    )
                   ],
                 ),
               )
             ],
+          ),
+        ),
+        bottomNavigationBar: SingleChildScrollView(
+          physics: const ClampingScrollPhysics(),
+          child: Container(
+            width: MediaQuery.of(context).size.width,
+            padding: const EdgeInsetsDirectional.symmetric(vertical: Dimensions.space15, horizontal: Dimensions.space15),
+            color: AppColors.screenBgColor,
+            child: CustomButtonWithIcon(
+                verticalPadding: Dimensions.space15,
+                horizontalPadding: Dimensions.space15,
+                text: "Create account",
+                icon: Icons.arrow_forward,
+                press: () => Get.toNamed(AppRoute.passwordScreen)
+            ),
           ),
         ),
       ),
