@@ -57,22 +57,52 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
               physics: const NeverScrollableScrollPhysics(),
               separatorBuilder: (context, index) => const SizedBox(height: Dimensions.space8),
               itemBuilder: (context, index){
-                return Align(
-                    alignment: (messages[index].messageType == "receiver" ? Alignment.topLeft : Alignment.topRight),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: messages[index].messageType  == "receiver" ? const BorderRadius.only(
-                            topRight: Radius.circular(12), bottomLeft: Radius.circular(12), bottomRight: Radius.circular(12)
-                        ) : const BorderRadius.only(
-                            topLeft: Radius.circular(12), bottomLeft: Radius.circular(12), bottomRight: Radius.circular(12)
+                return Row(
+                  mainAxisAlignment: messages[index].messageType  == "receiver" ? MainAxisAlignment.start : MainAxisAlignment.end,
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        messages[index].messageType  == "receiver" ? Container(
+                          height: 35, width: 35,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: AppColors.colorWhite,
+                            shape: BoxShape.circle,
+                            border: Border.all(color: AppColors.secondaryColor900, width: 1)
+                          ),
+                          child: Image.asset(AppImages.appBarTitleImage, height: 20, width: 20),
+                        ) : const SizedBox(),
+                        const SizedBox(width: Dimensions.space10),
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.45,
+                          decoration: BoxDecoration(
+                            borderRadius: messages[index].messageType  == "receiver" ? const BorderRadius.only(
+                                topRight: Radius.circular(12), bottomLeft: Radius.circular(12), bottomRight: Radius.circular(12)
+                            ) : const BorderRadius.only(
+                                topLeft: Radius.circular(12), bottomLeft: Radius.circular(12), bottomRight: Radius.circular(12)
+                            ),
+                            color: (messages[index].messageType  == "receiver" ? AppColors.secondaryColor900 : AppColors.primaryColor800),
+                          ),
+                          padding: const EdgeInsets.all(Dimensions.space15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Flexible(
+                                flex: 0,
+                                child: Text(
+                                    messages[index].messageContent,
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 2,
+                                    style: regularDefault.copyWith(color: messages[index].messageType  == "receiver" ? AppColors.colorWhite : AppColors.colorWhite)
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                        color: (messages[index].messageType  == "receiver" ? AppColors.secondaryColor900 : AppColors.primaryColor800),
-                      ),
-                      padding: const EdgeInsets.all(Dimensions.space15),
-                      child: Text(messages[index].messageContent, style: regularDefault.copyWith(
-                          color: messages[index].messageType  == "receiver" ? AppColors.colorWhite : AppColors.colorWhite
-                      )),
+                      ],
                     )
+                  ],
                 );
               },
             ),
