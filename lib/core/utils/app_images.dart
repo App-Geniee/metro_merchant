@@ -44,6 +44,10 @@ class AppImages{
   static const String shopIcon = "assets/icons/order/shop.png";
   static const String addressIcon = "assets/icons/order/location.png";
   static const String warningIcon = "assets/icons/order/warning.png";
+  static const String totalParcelIcon = "assets/icons/order/total_parcel.png";
+  static const String deliveredIcon = "assets/icons/order/delivered.png";
+  static const String canceledIcon = "assets/icons/order/cancelled.png";
+  static const String pendingIcon = "assets/icons/order/pending.png";
 
   /// sign up
   static const String successImage = "assets/icons/sign_up/success.png";

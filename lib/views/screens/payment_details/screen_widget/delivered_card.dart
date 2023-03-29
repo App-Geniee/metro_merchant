@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:metro_merchant/core/route/route.dart';
 import 'package:metro_merchant/core/utils/app_colors.dart';
 import 'package:metro_merchant/core/utils/app_images.dart';
 import 'package:metro_merchant/core/utils/dimensions.dart';
@@ -61,7 +63,7 @@ class DeliveredCard extends StatelessWidget {
                   textColor: AppColors.colorLightGreen
                 ),
                 GestureDetector(
-                  onTap: (){},
+                  onTap: () => Get.toNamed(AppRoute.accountDetailsScreen),
                   child: Text("Details", style: boldDefault.copyWith(color: AppColors.secondaryColor900)),
                 )
               ],

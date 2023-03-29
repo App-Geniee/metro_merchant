@@ -71,4 +71,9 @@ class AppColors{
 
   static const Color statusTextColor1 = Color(0xff00BBC7);
   static const Color statusTextColor2 = Color(0xff5E7A9D);
+
+  static const Color colorPurple = Color(0xffC344FF);
+  static const Color colorPurple100 = Color(0xffF9EDFF);
+  static const Color colorOrange = Color(0xffF96800);
+  static const Color colorOrange100 = Color(0xffFFF3EA);
 }
