@@ -90,7 +90,7 @@ class _CreateNewShopScreenState extends State<CreateNewShopScreen> {
               CustomButton(
                 text: "Create Shop",
                 press: (){
-                  Get.toNamed(AppRoute.deactivateShopScreen);
+                  Get.toNamed(AppRoute.allShopScreen);
                 },
               )
             ],

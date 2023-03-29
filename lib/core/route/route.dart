@@ -14,6 +14,7 @@ import 'package:metro_merchant/views/screens/auth/sign_up/sign_up_screen.dart';
 import 'package:metro_merchant/views/screens/create_parcel/create_parcel_screen.dart';
 import 'package:metro_merchant/views/screens/credit/credit_transaction_history_screen.dart';
 import 'package:metro_merchant/views/screens/home/home_screen.dart';
+import 'package:metro_merchant/views/screens/live_chat/live_chat_screen.dart';
 import 'package:metro_merchant/views/screens/order/edit/edit_parcel_screen.dart';
 import 'package:metro_merchant/views/screens/order/order_history/order_history_screen.dart';
 import 'package:metro_merchant/views/screens/order/view/view_order_details_screen.dart';
@@ -61,6 +62,8 @@ class AppRoute {
   static const String createNewShopScreen = "/create_new_shop_screen";
   static const String deactivateShopScreen = "/deactivate_shop_screen";
 
+  static const String liveChatScreen = "/live_chat_screen";
+
   static List<GetPage> route = [
     GetPage(name: splashScreen, page: () => const SplashScreen()),
     GetPage(name: signInScreen, page: () => const SignInScreen()),
@@ -96,5 +99,7 @@ class AppRoute {
     GetPage(name: allShopScreen, page: () => const AllShopScreen()),
     GetPage(name: createNewShopScreen, page: () => const CreateNewShopScreen()),
     GetPage(name: deactivateShopScreen, page: () => const DeactivateShopScreen()),
+
+    GetPage(name: liveChatScreen, page: () => const LiveChatScreen()),
   ];
 }

@@ -7,6 +7,7 @@ import 'package:metro_merchant/core/utils/dimensions.dart';
 import 'package:metro_merchant/core/utils/font_styles.dart';
 import 'package:metro_merchant/views/components/drawer/drawer_menu_item.dart';
 import 'package:metro_merchant/views/screens/home/screen_widget/drawer_button.dart';
+import 'package:metro_merchant/views/screens/payment_method/screen_widget/payment_method_dialog.dart';
 
 class DrawerContent extends StatelessWidget {
   const DrawerContent({Key? key}) : super(key: key);
@@ -63,7 +64,7 @@ class DrawerContent extends StatelessWidget {
               DrawerMenuItem(
                   imageSrc: AppImages.drawerLiveChatImage,
                   itemName: "Live Chat",
-                  press: (){}
+                  press: () => Get.toNamed(AppRoute.liveChatScreen)
               ),
               DrawerMenuItem(
                   imageSrc: AppImages.drawerSettingImage,

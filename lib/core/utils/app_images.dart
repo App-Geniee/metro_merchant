@@ -48,6 +48,7 @@ class AppImages{
   static const String deliveredIcon = "assets/icons/order/delivered.png";
   static const String canceledIcon = "assets/icons/order/cancelled.png";
   static const String pendingIcon = "assets/icons/order/pending.png";
+  static const String attachFileIcon = "assets/icons/order/attach_file.png";
 
   /// sign up
   static const String successImage = "assets/icons/sign_up/success.png";
