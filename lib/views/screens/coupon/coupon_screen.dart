@@ -4,7 +4,10 @@ import 'package:metro_merchant/core/utils/app_colors.dart';
 import 'package:metro_merchant/core/utils/app_images.dart';
 import 'package:metro_merchant/core/utils/dimensions.dart';
 import 'package:metro_merchant/core/utils/font_styles.dart';
+import 'package:metro_merchant/views/components/button/custom_button.dart';
 import 'package:metro_merchant/views/components/status/status_widget.dart';
+import 'package:metro_merchant/views/components/text_field/custom_text_field.dart';
+import 'package:metro_merchant/views/screens/coupon/coupon_bottom_nav.dart';
 import 'package:metro_merchant/views/screens/coupon/screen_widget/coupon_card.dart';
 
 class CouponScreen extends StatefulWidget {
@@ -25,7 +28,7 @@ class _CouponScreenState extends State<CouponScreen> {
       child: Scaffold(
         backgroundColor: AppColors.screenBgColor,
         appBar: AppBar(
-          elevation: 0.7,
+          elevation: 0,
           backgroundColor: AppColors.colorWhite,
           leading: GestureDetector(
             onTap: () => Get.back(),
@@ -116,6 +119,22 @@ class _CouponScreenState extends State<CouponScreen> {
                 ),
               ),
             )),
+          ),
+        ),
+        bottomNavigationBar: CouponBottomNav(
+          content: Column(
+            children: [
+              CustomTextField(
+                hintText: "Enter coupon code",
+                controller: TextEditingController(),
+                onChanged: (value){},
+              ),
+              const SizedBox(height: Dimensions.space15),
+              CustomButton(
+                text: "Apply coupon",
+                press: (){}
+              )
+            ],
           ),
         ),
       ),

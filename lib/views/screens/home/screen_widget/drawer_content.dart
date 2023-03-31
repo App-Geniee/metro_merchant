@@ -68,7 +68,7 @@ class DrawerContent extends StatelessWidget {
               DrawerMenuItem(
                   imageSrc: AppImages.drawerSettingImage,
                   itemName: "Settings",
-                  press: (){}
+                  press: () => Get.toNamed(AppRoute.rateUsScreen)
               ),
               DrawerMenuItem(
                   imageSrc: AppImages.drawerTermsOfDeliveryImage,

@@ -23,6 +23,7 @@ import 'package:metro_merchant/views/screens/payment_details/inner_screen/accoun
 import 'package:metro_merchant/views/screens/payment_details/payment_details_screen.dart';
 import 'package:metro_merchant/views/screens/payment_update/payment_update_screen.dart';
 import 'package:metro_merchant/views/screens/profile/profile_screen.dart';
+import 'package:metro_merchant/views/screens/settings/rate_us/rate_us_screen.dart';
 import 'package:metro_merchant/views/screens/shop/all_shop/all_shop_screen.dart';
 import 'package:metro_merchant/views/screens/shop/create_new_shop/create_new_shop_screen.dart';
 import 'package:metro_merchant/views/screens/shop/deactive_shop/deactive_shop_screen.dart';
@@ -68,6 +69,8 @@ class AppRoute {
   static const String liveChatScreen = "/live_chat_screen";
   static const String profileScreen = "/profile_screen";
 
+  static const String rateUsScreen = "/rate_us_screen";
+
   static List<GetPage> route = [
     GetPage(name: splashScreen, page: () => const SplashScreen()),
     GetPage(name: signInScreen, page: () => const SignInScreen()),
@@ -108,5 +111,7 @@ class AppRoute {
     GetPage(name: liveChatScreen, page: () => const LiveChatScreen()),
 
     GetPage(name: profileScreen, page: () => const ProfileScreen()),
+
+    GetPage(name: rateUsScreen, page: () => const RateUsScreen()),
   ];
 }

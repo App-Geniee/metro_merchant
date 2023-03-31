@@ -43,6 +43,7 @@ dependencies:
   im_stepper: ^1.0.1+1
   syncfusion_flutter_charts: ^21.1.35
   dotted_border: ^2.0.0+3
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_test:
