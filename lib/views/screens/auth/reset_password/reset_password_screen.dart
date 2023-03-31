@@ -93,7 +93,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                     CustomButtonWithIcon(
                         text: "Continue",
                         icon: Icons.arrow_forward,
-                        press: () => Get.toNamed(AppRoute.homeScreen)
+                        press: () => Get.toNamed(AppRoute.signInScreen)
                     ),
                   ],
                 ),

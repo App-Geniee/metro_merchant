@@ -104,7 +104,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   SizedBox(
                     width: 150,
-                    child: CustomButton(text: "Reset password", press: () => Get.toNamed(AppRoute.otpScreen, arguments: [])),
+                    child: CustomButton(text: "Reset password", press: () => Get.toNamed(AppRoute.otpScreen, arguments: [AppRoute.resetPasswordScreen])),
                   )
                 ],
               ),
