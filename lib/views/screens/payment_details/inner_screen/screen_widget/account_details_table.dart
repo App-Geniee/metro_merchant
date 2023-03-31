@@ -26,7 +26,6 @@ class AccountDetailsTable extends StatelessWidget {
                         style: boldSmall.copyWith(color: AppColors.colorBlack)
                     ),
                   ),
-                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(bottom: Dimensions.space12),
                     child: Text(
@@ -35,12 +34,11 @@ class AccountDetailsTable extends StatelessWidget {
                         style: boldSmall.copyWith(color: AppColors.colorBlack)
                     ),
                   ),
-                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(bottom: Dimensions.space12),
                     child: Text(
                         "Amount",
-                        textAlign: TextAlign.center,
+                        textAlign: TextAlign.right,
                         style: boldSmall.copyWith(color: AppColors.colorBlack)
                     ),
                   ),
@@ -52,11 +50,9 @@ class AccountDetailsTable extends StatelessWidget {
                     padding: const EdgeInsets.only(top: Dimensions.space12, bottom: Dimensions.space12),
                     child: Text(
                         "Total parcel",
-                        textAlign: TextAlign.center,
                         style: semiBoldSmall.copyWith(color: AppColors.colorBlack)
                     ),
                   ),
-                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(top: Dimensions.space12, bottom: Dimensions.space12),
                     child: Text(
@@ -65,16 +61,15 @@ class AccountDetailsTable extends StatelessWidget {
                         style: semiBoldSmall.copyWith(color: AppColors.colorBlack400)
                     ),
                   ),
-                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(top: Dimensions.space12, bottom: Dimensions.space12),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Image.asset(AppImages.takaIcon, color: AppColors.colorGreen, height: 12, width: 12),
                         Text(
                             "11250",
-                            textAlign: TextAlign.center,
+                            textAlign: TextAlign.right,
                             style: semiBoldSmall.copyWith(color: AppColors.colorGreen)
                         ),
                       ],
@@ -88,11 +83,9 @@ class AccountDetailsTable extends StatelessWidget {
                     padding: const EdgeInsets.only(top: Dimensions.space12, bottom: Dimensions.space12),
                     child: Text(
                         "Total parcel",
-                        textAlign: TextAlign.center,
                         style: semiBoldSmall.copyWith(color: AppColors.colorBlack)
                     ),
                   ),
-                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(top: Dimensions.space12, bottom: Dimensions.space12),
                     child: Text(
@@ -101,16 +94,15 @@ class AccountDetailsTable extends StatelessWidget {
                         style: semiBoldSmall.copyWith(color: AppColors.colorBlack400)
                     ),
                   ),
-                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(top: Dimensions.space12, bottom: Dimensions.space12),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Image.asset(AppImages.takaIcon, color: AppColors.colorGreen, height: 12, width: 12),
                         Text(
                             "11250",
-                            textAlign: TextAlign.center,
+                            textAlign: TextAlign.right,
                             style: semiBoldSmall.copyWith(color: AppColors.colorGreen)
                         ),
                       ],
@@ -124,11 +116,9 @@ class AccountDetailsTable extends StatelessWidget {
                     padding: const EdgeInsets.only(top: Dimensions.space12, bottom: Dimensions.space12),
                     child: Text(
                         "Total parcel",
-                        textAlign: TextAlign.center,
                         style: semiBoldSmall.copyWith(color: AppColors.colorBlack)
                     ),
                   ),
-                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(top: Dimensions.space12, bottom: Dimensions.space12),
                     child: Text(
@@ -137,16 +127,15 @@ class AccountDetailsTable extends StatelessWidget {
                         style: semiBoldSmall.copyWith(color: AppColors.colorBlack400)
                     ),
                   ),
-                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(top: Dimensions.space12, bottom: Dimensions.space12),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Image.asset(AppImages.takaIcon, color: AppColors.colorGreen, height: 12, width: 12),
                         Text(
                             "11250",
-                            textAlign: TextAlign.center,
+                            textAlign: TextAlign.right,
                             style: semiBoldSmall.copyWith(color: AppColors.colorGreen)
                         ),
                       ],
@@ -160,11 +149,9 @@ class AccountDetailsTable extends StatelessWidget {
                     padding: const EdgeInsets.only(top: Dimensions.space12, bottom: Dimensions.space12),
                     child: Text(
                         "Total parcel",
-                        textAlign: TextAlign.center,
                         style: semiBoldSmall.copyWith(color: AppColors.colorBlack)
                     ),
                   ),
-                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(top: Dimensions.space12, bottom: Dimensions.space12),
                     child: Text(
@@ -173,16 +160,15 @@ class AccountDetailsTable extends StatelessWidget {
                         style: semiBoldSmall.copyWith(color: AppColors.colorBlack400)
                     ),
                   ),
-                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(top: Dimensions.space12, bottom: Dimensions.space12),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Image.asset(AppImages.takaIcon, color: AppColors.colorGreen, height: 12, width: 12),
                         Text(
                             "11250",
-                            textAlign: TextAlign.center,
+                            textAlign: TextAlign.right,
                             style: semiBoldSmall.copyWith(color: AppColors.colorGreen)
                         ),
                       ],
@@ -196,11 +182,9 @@ class AccountDetailsTable extends StatelessWidget {
                     padding: const EdgeInsets.only(top: Dimensions.space12, bottom: Dimensions.space12),
                     child: Text(
                         "Total parcel",
-                        textAlign: TextAlign.center,
                         style: semiBoldSmall.copyWith(color: AppColors.colorBlack)
                     ),
                   ),
-                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(top: Dimensions.space12, bottom: Dimensions.space12),
                     child: Text(
@@ -209,16 +193,15 @@ class AccountDetailsTable extends StatelessWidget {
                         style: semiBoldSmall.copyWith(color: AppColors.colorBlack400)
                     ),
                   ),
-                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(top: Dimensions.space12, bottom: Dimensions.space12),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Image.asset(AppImages.takaIcon, color: AppColors.colorGreen, height: 12, width: 12),
                         Text(
                             "11250",
-                            textAlign: TextAlign.center,
+                            textAlign: TextAlign.right,
                             style: semiBoldSmall.copyWith(color: AppColors.colorGreen)
                         ),
                       ],

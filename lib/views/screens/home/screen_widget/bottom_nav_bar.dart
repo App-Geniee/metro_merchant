@@ -73,7 +73,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     }
     else if (index == 4) {
       if (!(selectedIndex == 4)) {
-
+        Get.toNamed(AppRoute.profileScreen);
       }
     }
   }
