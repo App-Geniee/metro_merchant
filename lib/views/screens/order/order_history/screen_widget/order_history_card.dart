@@ -76,7 +76,7 @@ class OrderHistoryCard extends StatelessWidget {
                     ),
                     PopupMenuItem(
                       child: GestureDetector(
-                        onTap: (){},
+                        onTap: () => Get.toNamed(AppRoute.ticketScreen),
                         child: Text("Ticket", style: semiBoldDefault.copyWith(color: AppColors.colorBlack300)),
                       )
                     )

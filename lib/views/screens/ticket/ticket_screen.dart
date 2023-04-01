@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:metro_merchant/core/route/route.dart';
 import 'package:metro_merchant/core/utils/app_colors.dart';
 import 'package:metro_merchant/core/utils/dimensions.dart';
 import 'package:metro_merchant/core/utils/font_styles.dart';
@@ -37,7 +38,7 @@ class _TicketScreenState extends State<TicketScreen> {
               padding: const EdgeInsets.only(top: Dimensions.space8, bottom: Dimensions.space8, right: Dimensions.space15),
               child: SizedBox(
                 width: 120,
-                child: CustomButton(text: "Add Ticket", press: (){})
+                child: CustomButton(text: "Add Ticket", press: () => Get.toNamed(AppRoute.addTicketScreen))
               ),
             )
           ],
@@ -50,7 +51,7 @@ class _TicketScreenState extends State<TicketScreen> {
               TicketTopSection(),
               SizedBox(height: Dimensions.space15),
               SearchYourTicketsSection(),
-              VerticalWidgetDivider(),
+              VerticalWidgetDivider(dividerColor: AppColors.colorBlack100,),
               SizedBox(height: Dimensions.space15),
               TicketResultSection()
             ],

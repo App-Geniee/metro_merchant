@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:metro_merchant/views/screens/add_payment_method/add_payment_method_screen.dart';
+import 'package:metro_merchant/views/screens/add_ticket/add_ticket_screen.dart';
 import 'package:metro_merchant/views/screens/auth/forget_password/forget_password_screen.dart';
 import 'package:metro_merchant/views/screens/auth/otp/otp_screen.dart';
 import 'package:metro_merchant/views/screens/auth/phone_number_verify/phone_number_verify_screen.dart';
@@ -54,6 +55,7 @@ class AppRoute {
   static const String creditTransactionHistoryScreen = "/credit_transaction_history_screen";
   static const String couponScreen = "/coupon_screen";
   static const String ticketScreen = "/ticket_screen";
+  static const String addTicketScreen = "/add_ticket_screen";
 
   static const String createParcelScreen = "/create_parcel_screen";
   static const String orderHistoryScreen = "/order_history_screen";
@@ -96,7 +98,9 @@ class AppRoute {
     GetPage(name: homeScreen, page: () => const HomeScreen()),
     GetPage(name: creditTransactionHistoryScreen, page: () => const CreditTransactionHistoryScreen()),
     GetPage(name: couponScreen, page: () => const CouponScreen()),
+
     GetPage(name: ticketScreen, page: () => const TicketScreen()),
+    GetPage(name: addTicketScreen, page: () => const AddTicketScreen()),
 
     GetPage(name: createParcelScreen, page: () => const CreateParcelScreen()),
     GetPage(name: orderHistoryScreen, page: () => const OrderHistoryScreen()),
