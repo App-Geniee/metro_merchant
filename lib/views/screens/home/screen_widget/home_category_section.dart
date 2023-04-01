@@ -34,7 +34,7 @@ class HomeCategorySection extends StatelessWidget {
             child: CategoryButton(
                 imageSrc: AppImages.ticketsImage,
                 text: "Tickets",
-                press: (){}
+                press: () => Get.toNamed(AppRoute.ticketScreen)
             ),
           ),
           Expanded(

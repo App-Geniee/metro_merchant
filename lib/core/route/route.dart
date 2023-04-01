@@ -28,6 +28,7 @@ import 'package:metro_merchant/views/screens/shop/all_shop/all_shop_screen.dart'
 import 'package:metro_merchant/views/screens/shop/create_new_shop/create_new_shop_screen.dart';
 import 'package:metro_merchant/views/screens/shop/deactive_shop/deactive_shop_screen.dart';
 import 'package:metro_merchant/views/screens/splash/splash_screen.dart';
+import 'package:metro_merchant/views/screens/ticket/ticket_screen.dart';
 
 class AppRoute {
   static const String splashScreen = "/splash_screen";
@@ -52,6 +53,7 @@ class AppRoute {
   static const String homeScreen = "/home_screen";
   static const String creditTransactionHistoryScreen = "/credit_transaction_history_screen";
   static const String couponScreen = "/coupon_screen";
+  static const String ticketScreen = "/ticket_screen";
 
   static const String createParcelScreen = "/create_parcel_screen";
   static const String orderHistoryScreen = "/order_history_screen";
@@ -94,6 +96,7 @@ class AppRoute {
     GetPage(name: homeScreen, page: () => const HomeScreen()),
     GetPage(name: creditTransactionHistoryScreen, page: () => const CreditTransactionHistoryScreen()),
     GetPage(name: couponScreen, page: () => const CouponScreen()),
+    GetPage(name: ticketScreen, page: () => const TicketScreen()),
 
     GetPage(name: createParcelScreen, page: () => const CreateParcelScreen()),
     GetPage(name: orderHistoryScreen, page: () => const OrderHistoryScreen()),

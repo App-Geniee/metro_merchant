@@ -51,6 +51,7 @@ class AppColors{
 
   static const Color colorDeepBlue = Color(0xff002D71);
   static const Color colorBlue = Color(0xff246DDC);
+  static const Color colorSkyBlue = Color(0xff00BDF9);
   static const Color colorBlueAccent = Color(0xff5783C5);
   static const Color colorLightBlue = Color(0xffD7E7FF);
 

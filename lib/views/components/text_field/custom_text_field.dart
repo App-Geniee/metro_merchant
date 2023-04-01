@@ -30,6 +30,7 @@ class CustomTextField extends StatefulWidget {
   final bool animatedLabel;
   final bool needLabel;
   final Color fillColor;
+  final Widget? prefixIcon;
 
   const CustomTextField({
     Key? key,
@@ -56,6 +57,7 @@ class CustomTextField extends StatefulWidget {
     this.maxLines = 1,
     this.animatedLabel = false,
     this.needLabel = false,
+    this.prefixIcon,
   }) : super(key: key);
 
   @override
@@ -89,6 +91,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         labelStyle: semiBoldDefault.copyWith(color: AppColors.colorBlack400, fontWeight: FontWeight.w600),
         fillColor: widget.fillColor,
         filled: true,
+        prefixIcon: widget.prefixIcon,
         border: OutlineInputBorder(borderSide: const BorderSide(width:0.5,color: AppColors.fieldDisableBorderColor), borderRadius: BorderRadius.circular(Dimensions.defaultRadius)),
         focusedBorder: OutlineInputBorder(borderSide: const BorderSide(width:0.5,color: AppColors.fieldEnableBorderColor), borderRadius: BorderRadius.circular(Dimensions.defaultRadius)),
         enabledBorder: OutlineInputBorder(borderSide: const BorderSide(width:0.5,color: AppColors.fieldDisableBorderColor), borderRadius: BorderRadius.circular(Dimensions.defaultRadius)),
@@ -131,9 +134,10 @@ class _CustomTextFieldState extends State<CustomTextField> {
           keyboardType: widget.textInputType,
           obscureText: widget.isPassword?obscureText:false,
           decoration: InputDecoration(
+            prefixIcon: widget.prefixIcon,
             contentPadding: const EdgeInsets.only(top: 5, left: 15, right: 15, bottom: 5),
             hintText: widget.hintText,
-            hintStyle: regularSmall.copyWith(color: AppColors.colorBlack.withOpacity(0.7)),
+            hintStyle: regularSmall.copyWith(color: AppColors.colorBlack300),
             fillColor: AppColors.transparentColor,
             filled: true,
             border: OutlineInputBorder(borderSide: const BorderSide(width:0.5,color: AppColors.fieldDisableBorderColor), borderRadius: BorderRadius.circular(Dimensions.defaultRadius)),
@@ -175,11 +179,12 @@ class _CustomTextFieldState extends State<CustomTextField> {
       keyboardType: widget.textInputType,
       obscureText: widget.isPassword?obscureText:false,
       decoration: InputDecoration(
+        prefixIcon: widget.prefixIcon,
         contentPadding: const EdgeInsets.only(top: 5, left: 0, right: 0, bottom: 5),
         labelText:  widget.labelText?.tr,
         labelStyle: semiBoldDefault.copyWith(color: AppColors.colorBlack400, fontWeight: FontWeight.w600),
         hintText: widget.hintText,
-        hintStyle: regularSmall.copyWith(color: AppColors.colorBlack.withOpacity(0.7)),
+        hintStyle: regularSmall.copyWith(color: AppColors.colorBlack300),
         fillColor: AppColors.transparentColor,
         filled: true,
         border: const UnderlineInputBorder(borderSide: BorderSide(width:0.5,color: AppColors.fieldDisableBorderColor)),
