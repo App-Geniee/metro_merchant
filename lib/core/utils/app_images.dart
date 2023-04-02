@@ -2,6 +2,7 @@ class AppImages{
 
   /// app bar
   static const String appLogo = "assets/images/home/app_logo.png";
+  static const String splashImage = "assets/images/home/splash_image.png";
   static const String appBarTitleImage = "assets/images/home/app_bar.png";
   static const String notificationImage = "assets/images/home/notification.png";
 
