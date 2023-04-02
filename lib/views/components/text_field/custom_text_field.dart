@@ -86,7 +86,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
       keyboardType: widget.textInputType,
       obscureText: widget.isPassword?obscureText:false,
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.only(top: 5, left: 15, right: 15, bottom: 5),
+        //contentPadding: const EdgeInsets.only(top: 5, left: 15, right: 15, bottom: 5),
         labelText: widget.labelText,
         labelStyle: semiBoldDefault.copyWith(color: AppColors.colorBlack400, fontWeight: FontWeight.w600),
         fillColor: widget.fillColor,
@@ -135,7 +135,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           obscureText: widget.isPassword?obscureText:false,
           decoration: InputDecoration(
             prefixIcon: widget.prefixIcon,
-            contentPadding: const EdgeInsets.only(top: 5, left: 15, right: 15, bottom: 5),
+            //contentPadding: const EdgeInsets.only(top: 5, left: 15, right: 15, bottom: 5),
             hintText: widget.hintText,
             hintStyle: regularSmall.copyWith(color: AppColors.colorBlack300),
             fillColor: AppColors.transparentColor,
@@ -180,7 +180,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
       obscureText: widget.isPassword?obscureText:false,
       decoration: InputDecoration(
         prefixIcon: widget.prefixIcon,
-        contentPadding: const EdgeInsets.only(top: 5, left: 0, right: 0, bottom: 5),
+        contentPadding: const EdgeInsets.only(top: 12, left: 0, right: 0),
         labelText:  widget.labelText?.tr,
         labelStyle: semiBoldDefault.copyWith(color: AppColors.colorBlack400, fontWeight: FontWeight.w600),
         hintText: widget.hintText,

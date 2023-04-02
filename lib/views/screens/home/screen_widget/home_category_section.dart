@@ -42,7 +42,7 @@ class HomeCategorySection extends StatelessWidget {
             child: CategoryButton(
                 imageSrc: AppImages.fraudImage,
                 text: "Fraud",
-                press: (){}
+                press: () => Get.toNamed(AppRoute.fraudScreen)
             ),
           ),
           Expanded(

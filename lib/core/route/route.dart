@@ -16,6 +16,7 @@ import 'package:metro_merchant/views/screens/coupon/coupon_screen.dart';
 import 'package:metro_merchant/views/screens/create_parcel/create_parcel_screen.dart';
 import 'package:metro_merchant/views/screens/credit/credit_transaction_history_screen.dart';
 import 'package:metro_merchant/views/screens/edit_issue/edit_issue_screen.dart';
+import 'package:metro_merchant/views/screens/fraud/fraud_screen.dart';
 import 'package:metro_merchant/views/screens/home/home_screen.dart';
 import 'package:metro_merchant/views/screens/live_chat/live_chat_screen.dart';
 import 'package:metro_merchant/views/screens/order/edit/edit_parcel_screen.dart';
@@ -77,6 +78,8 @@ class AppRoute {
 
   static const String rateUsScreen = "/rate_us_screen";
 
+  static const String fraudScreen = "/fraud_screen";
+
   static List<GetPage> route = [
     GetPage(name: splashScreen, page: () => const SplashScreen()),
     GetPage(name: signInScreen, page: () => const SignInScreen()),
@@ -123,5 +126,7 @@ class AppRoute {
     GetPage(name: profileScreen, page: () => const ProfileScreen()),
 
     GetPage(name: rateUsScreen, page: () => const RateUsScreen()),
+
+    GetPage(name: fraudScreen, page: () => const FraudScreen()),
   ];
 }
